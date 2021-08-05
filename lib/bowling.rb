@@ -5,6 +5,7 @@ class Bowling
         #スコアの合計
         @total_score = 0
     end
+    
 #スコアの合計を返す
 def total_score
     @total_score
