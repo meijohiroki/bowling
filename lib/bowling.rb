@@ -9,7 +9,7 @@ class Bowling
         #一時保存用の配列
         @temp = []
     end
-    
+    #eeeeee
 #スコアの合計を返す
 def total_score
     @total_score
