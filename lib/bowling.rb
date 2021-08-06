@@ -46,7 +46,8 @@ class Bowling
         @total_score += score.inject(:+)
       end
       # 合計をフレームごとに記録しておく
-      #@frame_score << @total_score
+      
+      @frame_score << @total_score
     end
   end
 
