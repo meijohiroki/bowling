@@ -113,7 +113,9 @@ describe "全体の合計" do
              @game.add_score(10)
              #第二フレームでストライク
              @game.add_score(10)
-             #第二フレームで5点,4点
+             #第三フレームでストライク
+             @game.add_score(10)
+             #第四フレームで5点,4点
              @game.add_score(5)
              @game.add_score(4)
              #以降は全てガター
@@ -125,6 +127,7 @@ describe "全体の合計" do
              expect(@game.total_score).to eq 83
          end
      end
+     
      context "最終フレームでストライクを取った場合" do
          it "ストライクボーナスが加算されること" do
              #第一フレームでストライク
@@ -132,8 +135,10 @@ describe "全体の合計" do
              #第二フレームで5点,4点
              @game.add_score(5)
              @game.add_score(4)
-             #以降は全てガター
+             #3~9フレームは全てガター
              add_many_scores(14, 0)
+             #最終フレームでストライク
+             @game.add_score(10)
              #合計を計算
              @game.calc_score
              #期待する合計 *()内はボーナス点
